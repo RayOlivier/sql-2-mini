@@ -1,0 +1,44 @@
+/* CREATE TABLE movie (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  media_type_id INTEGER,
+  FOREIGN KEY(media_type_id) REFERENCES MediaType(MediaTypeId)
+  ) */
+  
+/*   INSERT INTO movie (title, media_type_id)
+  VALUES ("Arrival", 3) */
+  
+/*   SELECT * FROM movie */
+
+/* ALTER TABLE movie
+ADD COLUMN genre_id INTEGER REFERENCES Genre(GenreId) */
+
+/* UPDATE movie SET genre_id =22 WHERE id = 1 */
+/* SELECT * FROM movie */
+
+/* SELECT ar.name, al.title
+FROM Album al
+JOIN Artist ar ON ar.ArtistId = al.ArtistId */
+
+/* SELECT * FROM Track
+WHERE GenreId IN (SELECT GenreId FROM Genre WHERE Name= 'Jazz' Or Name='Blues') */
+
+/* UPDATE Employee SET Phone = NULL WHERE EmployeeId = 1 */
+
+/* SELECT * FROM Employee */
+
+/* SELECT * FROM Customer
+WHERE Company IS NULL */
+
+/* SELECT ar.ArtistId, ar.name, Count(*)
+FROM Artist ar
+JOIN Album al ON ar.ArtistId = al.ArtistId
+GROUP BY ar.ArtistId */
+
+/* SELECT DISTINCT country FROM Customer */
+
+/* SELECT * FROM Customer 
+WHERE fax IS NULL */
+
+/* DELETE FROM Customer 
+WHERE fax IS NULL */
